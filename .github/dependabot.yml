@@ -3,11 +3,11 @@
 # https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file#package-ecosystem
 version: 2
 updates:
-  - package-ecosystem: github-actions
-    directory: /
+  - package-ecosystem: github-actions # 只监控 GitHub Actions
+    directory: / # 监控根目录/所有目录
     groups:
       github-actions:
         patterns:
-          - "*"  # Group all Actions updates into a single larger pull request
+          - "*"  # 将所有 Actions 更新分组
     schedule:
-      interval: weekly
+      interval: weekly # 每周检查一次

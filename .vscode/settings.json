@@ -1,16 +1,48 @@
 {
+  // 指定 TypeScript 语言服务器的路径，使用项目本地的 TypeScript 版本而不是全局版本
+  // 这确保项目使用特定版本的 TypeScript，避免版本冲突
   "typescript.tsdk": "node_modules/typescript/lib",
+  
+  // 配置 Rust Analyzer 插件，指定需要分析的 Rust 项目
+  // 这里包含了两个 Rust 项目：Tauri 框架和 Readest 应用
   "rust-analyzer.linkedProjects": [
-    "packages/tauri/Cargo.toml",
-    "apps/readest-app/src-tauri/Cargo.toml"
+    "packages/tauri/Cargo.toml",           // Tauri 框架项目
+    "apps/readest-app/src-tauri/Cargo.toml" // Readest 应用的 Tauri 后端
   ],
+  
+  // 保存时自动格式化代码（当前被注释掉了）
+  // 取消注释后，每次保存文件时都会自动格式化代码
   // "editor.formatOnSave": true, // uncomment to add format on save
+  
+  // TypeScript 内联提示配置 - 显示参数名称
+  // "all" 表示显示所有参数名称，包括未使用的参数
   "typescript.inlayHints.parameterNames.enabled": "all",
+  
+  // 显示变量类型的内联提示
+  // 在变量旁边显示其推断出的类型信息
   "typescript.inlayHints.variableTypes.enabled": true,
+  
+  // 显示属性声明类型的内联提示
+  // 在对象属性旁边显示其类型信息
   "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+  
+  // 显示函数返回类型的内联提示
+  // 在函数定义旁边显示其返回类型
   "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  
+  // 显示枚举成员值的内联提示
+  // 在枚举成员旁边显示其实际值
   "typescript.inlayHints.enumMemberValues.enabled": true,
+  
+  // 禁用 JavaScript 文件的语法验证
+  // 因为项目主要使用 TypeScript，避免 JavaScript 验证干扰
   "javascript.validate.enable": false,
+  
+  // 禁用 JavaScript 文件的格式化功能
+  // 统一使用 TypeScript 的格式化规则
   "javascript.format.enable": false,
+  
+  // 禁用 TypeScript 文件的格式化功能
+  // 可能使用其他格式化工具（如 Prettier）来处理代码格式化
   "typescript.format.enable": false,
 }
