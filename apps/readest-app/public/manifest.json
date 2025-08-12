@@ -1,26 +1,41 @@
 {
+  // 应用完整名称
   "name": "Readest",
+  
+  // 应用短名称（用于主屏幕显示）
   "short_name": "Readest",
+  
+  // 应用启动URL
   "start_url": "/",
+  
+  // 显示模式：standalone = 隐藏浏览器UI，像原生应用
   "display": "standalone",
+  
+  // 启动画面背景色
   "background_color": "#ffffff",
+  
+  // 应用描述
   "description": "Readest is an open-source eBook reader supporting EPUB, PDF, and sync across devices.",
+  
+  // 应用图标配置
   "icons": [
     {
       "src": "/icon.png",
-      "type": "image/png",
-      "sizes": "192x192"
+      "type": "image/png", 
+      "sizes": "192x192"  // 小尺寸图标
     },
     {
       "src": "/icon.png",
       "type": "image/png",
-      "sizes": "256x256"
+      "sizes": "256x256"  // 中等尺寸图标
     },
     {
-      "src": "/icon.png",
+      "src": "/icon.png", 
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512"  // 大尺寸图标
     }
   ],
+  
+  // 禁用启动画面（null = 不显示）
   "splash_pages": null
 }
