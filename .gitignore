@@ -40,3 +40,4 @@ next-env.d.ts
 target
 
 fastlane/report.xml
+rustup-init.exe
